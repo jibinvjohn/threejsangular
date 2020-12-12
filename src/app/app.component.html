@@ -1,1 +1,7 @@
-<app-loader></app-loader>
+<div class="form-group">
+  <label class="file-upload">
+    <input type="file" id="file" style="display: none;" (change)="handleFileInput($event)" />
+    Load FBX Files
+  </label>
+</div>
+<app-loader [modelFile]="fileToUpload"></app-loader>

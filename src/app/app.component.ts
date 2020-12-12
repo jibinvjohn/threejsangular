@@ -3,14 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'threejsdemo';
+  fileToUpload: any = null;
 
-  constructor() {
+  constructor() {}
 
+  ngOnInit() {}
+
+  handleFileInput(event: any) {
+    const files = event.target.files;
+    this.fileToUpload = files.item(0);
   }
-
-  ngOnInit() { }
 }
