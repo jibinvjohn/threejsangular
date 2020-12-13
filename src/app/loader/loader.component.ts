@@ -42,10 +42,11 @@ export class LoaderComponent implements OnChanges {
   @Input() modelFile: File = null as any;
   scene = new Scene();
 
+  // camera = new PerspectiveCamera(70, window.innerWidth / window.innerWidth, 0.5, 10000 );
   camera = new OrthographicCamera(
     window.innerWidth / -2,
     window.innerWidth / 2,
-    window.innerHeight / 2,
+    window.innerWidth / 2,
     window.innerHeight / -2,
     1,
     1000
